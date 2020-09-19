@@ -46,6 +46,19 @@ data("penguins", package = "palmerpenguins")
 
 *(excluded the missing values)*
 
-##### 
-I can take the mean of the sample, too!
-The mean is `r mean(samp)`.
+#### 2.3 Plotting and exporting
+
+##### Flipper_length_mm (y) vs bill_length_mm (x)
+
+*(excluded the missing values)*
+```{r scatterplot,collapse = TRUE, warning = FALSE}
+plot_flipper_billL <- ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+plot_flipper_billL
+```
+
+##### Export and save the plot
+
+```{r png_export, warning = FALSE}
+ggsave('plot_flipper_billL.png', plot = plot_flipper_billL)
+```
+
