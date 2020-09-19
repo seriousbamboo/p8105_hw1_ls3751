@@ -1,5 +1,7 @@
 ---
 title: "p8105_hw1_ls3751"
+author: "Liucheng Shi"
+date: 2020-9-19
 output: github_document
 ---
 
