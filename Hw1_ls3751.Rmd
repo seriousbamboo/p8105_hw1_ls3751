@@ -32,8 +32,9 @@ data("penguins", package = "palmerpenguins")
 
 ##### Overview
 
-> The penguins dataset has `r ncol(penguins)` variables, including `r names(penguins)`.
+> The penguins dataset has `r ncol(penguins)` variables, including `r names(penguins)`; It has __`r nrow(penguins)`__ rows and __`r ncol(penguins)`__ columns; The mean flipper length is `r round(mean(pull(penguins,flipper_length_mm), na.rm = T), digits = 2)` mm.
 
+ 
 *   The variable __species__ is a `r class(penguins$species)` variable, with `r nlevels(penguins$species)` levels: `r levels(penguins$species)`.
 *   The variable __island__ is a `r class(penguins$island)` variable, with `r nlevels(penguins$island)` levels: `r levels(penguins$island)`.
 *   The variable __bill_length_mm__ is a `r class(penguins$bill_length_mm)` variable (Max: `r max(penguins$bill_length_mm, na.rm = T)`, Min: `r min(penguins$bill_length_mm, na.rm = T)`, Mean: `r round(mean(penguins$bill_length_mm, na.rm = T), digits = 2)`, Median: `r median(penguins$bill_length_mm,na.rm = T)`).
@@ -42,6 +43,8 @@ data("penguins", package = "palmerpenguins")
 *   The variable __body_mass_g__ is a `r class(penguins$body_mass_g)` variable (Max: `r max(penguins$body_mass_g, na.rm = T)`, Min: `r min(penguins$body_mass_g, na.rm = T)`, Mean: `r round(mean(penguins$body_mass_g, na.rm = T),digits = 2)`, Median: `r median(penguins$body_mass_g,na.rm = T)`).
 *   The variable __sex__ is a `r class(penguins$sex)` variable, with `r nlevels(penguins$sex)` levels: `r levels(penguins$sex)`.
 *   The variable __year__ is a `r class(penguins$year)` variable (Max: `r max(penguins$year, na.rm = T)`, Min: `r min(penguins$year, na.rm = T)`,  Median: `r median(penguins$year,na.rm = T)`).
+
+*(excluded the missing values)*
 
 ##### 
 I can take the mean of the sample, too!
