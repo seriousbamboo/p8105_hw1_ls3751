@@ -1,11 +1,10 @@
 ---
 title: "p8105_hw1_ls3751"
 author: "Liucheng Shi"
-date: 2020-9-19
 output: github_document
 ---
 
-_Load required packages_
+_packages required_
 ```{r setup, message = FALSE}
 library(tidyverse)
 library(palmerpenguins)
@@ -34,7 +33,7 @@ mean(pull(sample_df,vec_char))
 mean(pull(sample_df,vec_factor))
 ```
 
-__Numeric__ and __logical__vectors did generate the mean. It turns out the the mean of __character vector__ and __factor vector__ returns __NA__. Given the mean of logical vector is `r mean(pull(sample_df,vec_logical))` and the number of TRUE is `r length(sample_df$vec_logical[sample_df$vec_norm>0])`,it is reasonable to assume that True equals to 1 and False equals to 0 in the logical vector.
+__Numeric__ and __logical__ vectors did generate the mean. It turns out the the mean of __character vector__ and __factor vector__ returns __NA__. Given the mean of logical vector is `r mean(pull(sample_df,vec_logical))` and the number of TRUE is `r length(sample_df$vec_logical[sample_df$vec_norm>0])`,it is reasonable to assume that True equals to 1 and False equals to 0 in the logical vector.
 
 #### 1.3 convert vectors
 
