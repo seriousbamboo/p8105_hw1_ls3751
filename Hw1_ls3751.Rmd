@@ -1,0 +1,48 @@
+---
+title: "p8105_hw1_ls3751"
+output: github_document
+---
+
+_Load required packages_
+```{r setup, message = FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+
+## Problem 1
+
+Here's a **code chunk** that samples from 
+a _normal distribution_:
+
+```{r}
+samp = rnorm(100)
+length(samp)
+```
+
+## Problem 2
+
+#### 2.1 Load the pengins dataset
+
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+#### 2.2 Description of the penguins dataset
+
+##### Overview
+
+> The penguins dataset has `r ncol(penguins)` variables, including `r names(penguins)`.
+
+*   The variable __species__ is a `r class(penguins$species)` variable, with `r nlevels(penguins$species)` levels: `r levels(penguins$species)`.
+*   The variable __island__ is a `r class(penguins$island)` variable, with `r nlevels(penguins$island)` levels: `r levels(penguins$island)`.
+*   The variable __bill_length_mm__ is a `r class(penguins$bill_length_mm)` variable (Max: `r max(penguins$bill_length_mm, na.rm = T)`, Min: `r min(penguins$bill_length_mm, na.rm = T)`, Mean: `r round(mean(penguins$bill_length_mm, na.rm = T), digits = 2)`, Median: `r median(penguins$bill_length_mm,na.rm = T)`).
+*   The variable __bill_depth_mm__ is a `r class(penguins$bill_depth_mm)` variable (Max: `r max(penguins$bill_depth_mm, na.rm = T)`, Min: `r min(penguins$bill_depth_mm, na.rm = T)`, Mean: `r round(mean(penguins$bill_depth_mm, na.rm = T),digits = 2)`, Median: `r median(penguins$bill_depth_mm,na.rm = T)`).
+*   The variable __flipper_length_mm__ is a `r class(penguins$flipper_length_mm)` variable (Max: `r max(penguins$flipper_length_mm, na.rm = T)`, Min: `r min(penguins$flipper_length_mm, na.rm = T)`, Mean: `r round(mean(penguins$flipper_length_mm, na.rm = T),digits = 2)`, Median: `r median(penguins$flipper_length_mm,na.rm = T)`).
+*   The variable __body_mass_g__ is a `r class(penguins$body_mass_g)` variable (Max: `r max(penguins$body_mass_g, na.rm = T)`, Min: `r min(penguins$body_mass_g, na.rm = T)`, Mean: `r round(mean(penguins$body_mass_g, na.rm = T),digits = 2)`, Median: `r median(penguins$body_mass_g,na.rm = T)`).
+*   The variable __sex__ is a `r class(penguins$sex)` variable, with `r nlevels(penguins$sex)` levels: `r levels(penguins$sex)`.
+*   The variable __year__ is a `r class(penguins$year)` variable (Max: `r max(penguins$year, na.rm = T)`, Min: `r min(penguins$year, na.rm = T)`,  Median: `r median(penguins$year,na.rm = T)`).
+
+##### 
+I can take the mean of the sample, too!
+The mean is `r mean(samp)`.
