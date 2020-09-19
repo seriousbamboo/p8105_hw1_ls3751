@@ -16,9 +16,9 @@ library(palmerpenguins)
 
 ```{r sample_df, collapse = TRUE}
 sample_df <- tibble(
-  vec_norm = rnorm(10) , 
-  vec_logical = vec_norm > 0 ,
-  vec_char = LETTERS [1:10] ,
+  vec_norm = rnorm(10), 
+  vec_logical = vec_norm > 0,
+  vec_char = LETTERS [1:10],
   vec_factor = factor(c("A","A","A","B","B","B","B","B","C","C"))
 )
 ```
